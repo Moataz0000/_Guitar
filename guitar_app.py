@@ -1,15 +1,5 @@
-from dataclasses import dataclass, asdict
-from typing import Union
-
-@dataclass
-class GuitarProperties:
-    serial_number: str
-    price: float
-    builder: str
-    model: str
-    type: str
-    backwood: str
-    topwood: str
+from dataclasses import asdict
+from .class_data import GuitarProperties
 
 class Guitar:
     def __init__(self, properties: GuitarProperties) -> None:
@@ -51,4 +41,4 @@ guitar1 = Guitar(properties=GuitarProperties(
 
 ))
 
-print(guitar1.getAllInfo())
+print(guitar1.getSerialNumber())
